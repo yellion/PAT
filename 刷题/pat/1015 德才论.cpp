@@ -3,7 +3,7 @@
 #include <algorithm>
 using namespace std;
 struct information{
-	long long int info;
+	char info[10];
 	int de;
 	int cai;
 	int sum;
@@ -13,7 +13,7 @@ bool cmp(information a,information b){
 	if(a.rank!=b.rank) return a.rank<b.rank;
 	else if(a.sum!=b.sum) return a.sum>b.sum;
 	else if(a.de!=b.de) return a.de>b.de;
-	else return a.info<b.info;
+	else return strcmp(a.info,b.info)<0;
 }
 int main(){
 	int n,l,h;
